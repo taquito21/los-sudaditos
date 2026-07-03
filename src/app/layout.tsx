@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bebas_Neue, Fredoka, Archivo_Black } from "next/font/google";
 import "./globals.css";
 
@@ -25,6 +25,11 @@ export const metadata: Metadata = {
   title: "Tacos al Vapor · Los Sudaditos — Cd. Juárez",
   description:
     "Los mejores tacos al vapor de la esquina del Superette. Frijol, chicharrón y picadillo. Orden de 4 tacos $45. Calle Durango y Santiago Troncoso, Cd. Juárez.",
+  appleWebApp: {
+    capable: true,
+    title: "Los Sudaditos",
+    statusBarStyle: "default",
+  },
   openGraph: {
     title: "Tacos al Vapor · Los Sudaditos — Cd. Juárez",
     description:
@@ -40,6 +45,10 @@ export const metadata: Metadata = {
       },
     ],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#E11C22",
 };
 
 export default function RootLayout({
